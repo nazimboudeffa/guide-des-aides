@@ -30,29 +30,51 @@
             </div>
             <div class="form-group">
                 <label>Je suis:</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Étudiant(e)</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Apprenti(e)</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Retraité(e)</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Chômeur</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Enceinte</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Handicapé</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Inapte</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Intérmitent</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Actif</label>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="student">Étudiant(e)</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="aprentice">Apprenti(e)</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="retired">Retraité(e)</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="unemployed">Chômeur</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="pregnant">Enceinte</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="disabled">Handicapé</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="unfit">Inapte</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="intermittent">Intérmitent</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="working">Employé</label>
+                </div>
             </div>
         </div>
         <button type="button" class="btn btn-primary" id="simulate">Simuler</button>
     </div>
     <script>
         function calculateRSA(age){
+            const rsa = 565.34;
             if (age < 25){
-                alert("Vous devez être plus agé pour bénéficier du RSA");
+                return "Vous devez être agé de 25 ans ou plus pour bénéficier du RSA";
+            } else {
+
             }
+            return rsa;
         }
         $(document).ready(function(){
             $("#simulate").click(function(){
                 var age = $("#age").val();
-                calculateRSA(age)
+                alert(calculateRSA(age));
             });
         });
     </script>
