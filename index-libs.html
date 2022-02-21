@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Guide des Aides</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Profil</h1>
+        <div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" min="0" placeholder="24">
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationalité:</label>
+                <select class="form-control" id="nationality">
+                  <option>France</option>
+                  <option>UE</option>
+                  <option>Étranger</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Je suis:</label>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="student">Étudiant(e)</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="aprentice">Apprenti(e)</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="retired">Retraité(e)</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="unemployed">Chômeur</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="pregnant">Enceinte</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="disabled">Handicapé(e)</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="unfit">Inapte</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="intermittent">Intérmitent(e)</label>
+                </div>
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" value="working">Employé(e)</label>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="simulate">Simuler</button>
+    </div>
+    <script>
+        function calculateRSA(age){
+            const rsa = 565.34;
+            if (age < 25){
+                return "Vous devez être agé de 25 ans ou plus pour bénéficier du RSA";
+            } else {
+
+            }
+            return rsa;
+        }
+        $(document).ready(function(){
+            $("#simulate").click(function(){
+                var age = $("#age").val();
+                alert(calculateRSA(age));
+            });
+        });
+    </script>
+</body>
+</html>
