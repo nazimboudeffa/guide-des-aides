@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <title>Guide des Aides</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Profil</h1>
-        <div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" class="form-control" id="age" min="0" placeholder="24">
-            </div>
-            <div class="form-group">
-                <label for="nationality">Nationalité:</label>
-                <select class="form-control" id="nationality">
-                  <option>France</option>
-                  <option>UE</option>
-                  <option>Étranger</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Je suis:</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Étudiant(e)</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Apprenti(e)</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Retraité(e)</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Chômeur</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Enceinte</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Handicapé</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Inapte</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Intérmitent</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Actif</label>
-            </div>
+      <h1>Profil</h1>
+      <div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="age"
+            min="0"
+            placeholder="24"
+          />
         </div>
-        <button type="button" class="btn btn-primary" id="simulate">Simuler</button>
+        <div class="form-group">
+          <label for="nationality">Nationalité:</label>
+          <select class="form-control" id="nationality">
+            <option>France</option>
+            <option>UE</option>
+            <option>Étranger</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Je suis:</label>
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Étudiant(e)</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Apprenti(e)</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Retraité(e)</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Chômeur</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Enceinte</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Handicapé</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Inapte</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Intérmitent</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="" />Actif</label
+          >
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="simulate">
+        Simuler
+      </button>
     </div>
     <script>
-        function calculateRSA(age){
-            if (age < 25){
-                alert("Vous devez être plus agé pour bénéficier du RSA");
-            }
+      function calculateRSA(age) {
+        if (age < 25) {
+          alert("Vous devez être plus agé pour bénéficier du RSA");
         }
-        $(document).ready(function(){
+      }
+      document.getElementById("simulate").addEventListener("click", () => {
+        calculateRSA(document.getElementById("age").value);
+      });
+
+      // Aurevoir jquery
+
+      /*         $(document).ready(function(){
             $("#simulate").click(function(){
                 var age = $("#age").val();
                 calculateRSA(age)
             });
-        });
+        }); */
     </script>
-</body>
+  </body>
 </html>
